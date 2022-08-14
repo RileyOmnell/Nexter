@@ -1,3 +1,3 @@
 # Nexter
 Real Estate Agency
-Practicing grid only layouts
+ - Practicing grid only layouts
