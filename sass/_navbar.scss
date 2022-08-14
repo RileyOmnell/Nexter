@@ -1,0 +1,109 @@
+.navbar {
+    background-color: $color-primary;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        position: relative;
+        justify-content:center;
+    }
+
+ 
+
+   &__list {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    margin: .5rem 4rem 0 0;
+    line-height: 1;
+    transition: all .2s;
+   
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        gap: 5rem;
+        width: 100%;
+        background-color: $color-primary;
+        margin-top: -60rem;
+        text-align: center;
+    }
+
+    &--active {
+        margin-top: 0;
+        padding: 56rem 4rem 7rem 4rem;
+    }
+   }
+
+   &__item {
+
+   }
+
+   &__link:link,
+   &__link:visited {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+        font-family: $font-display;
+        text-transform: uppercase;
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
+    }
+    &__link:hover,
+   	&__link:active {
+        color: $color-secondary;
+
+    }
+    
+}
+
+
+.nav-btn {
+    cursor: pointer;
+    transition: all .2s;
+    margin-right: 3.5rem;
+    display: none;
+
+    @media only screen and (max-width: $bp-small) {
+        display: block;
+        position: absolute;
+        margin-right: 0;
+        right: 3rem;
+        top: 1rem;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &__bar {
+        display: block;
+        width: 4rem;
+        height: 2px;
+        margin: 1rem 0; 
+        background-color: #fff;
+        transition: all .2s;
+    }
+
+    &--active &__bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg); 
+    }
+
+    &--active &__bar:nth-child(2) {
+        opacity: 0;
+    }
+    &--active &__bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+}
+
